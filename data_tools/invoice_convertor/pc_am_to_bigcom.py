@@ -15,6 +15,8 @@ def covert_invoice_data(input_file = None , output_file = None , format_name = '
             for key in row.keys():
                 new_key = fields_maps.get(key)
                 big_com_map_row[new_key] =row[key]
+            #default values
+            big_com_map_row['Track Inventory'] = 'Y'
             writer.writerow(big_com_map_row)
 
 if __name__ == "__main__":
